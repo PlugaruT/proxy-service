@@ -28,7 +28,7 @@ class PostViewSet(viewsets.ModelViewSet):
 
 class PostsPerUserViewSet(mixins.RetrieveModelMixin, mixins.ListModelMixin,
                           viewsets.GenericViewSet):
-    renderer_classes = (XMLRenderer, JSONRenderer)
+    renderer_classes = (JSONRenderer, XMLRenderer)
 
     def get_queryset(self):
         return Post.objects.all()
