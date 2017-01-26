@@ -3,8 +3,10 @@ class UrlHandling:
         pass
 
     @classmethod
-    def parse_url(klass, url, request, server_route):
-        args = ''
-        for arg, value in request.args.items():
-            args += '?{}={}'.format(arg, value)
-        return '{}{}{}'.format(server_route, url, args)
+    def parse_url(klass, url, server_route):
+        print('1', url)
+        if url[-1] == '/':
+            url = url[:-1]
+
+        print('2', url)
+        return '{}{}/'.format(server_route, url)
