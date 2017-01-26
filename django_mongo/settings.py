@@ -25,7 +25,7 @@ SECRET_KEY = 'rna)q7o@+cq&=-gtp9ccf&0rbd+f3mo_!^9f@aggr=#e1j$fo4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.1.115', '192.168.43.144', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -52,7 +52,6 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
-
 
 ROOT_URLCONF = 'django_mongo.urls'
 
@@ -85,7 +84,7 @@ DATABASES = {
 
 mongoengine.connect(
     db="djangomongo",
-    host="localhost"
+    host="192.168.1.122"
 )
 
 # Password validation
