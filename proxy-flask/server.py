@@ -8,7 +8,7 @@ import requests
 
 from .utils import UrlHandling, RoundRobin
 
-HOSTS = ['http://127.0.0.1:8009/', 'http://192.168.1.122:8003/', 'http://192.168.1.122:8004/']
+HOSTS = ['http://127.0.0.1:8009/', 'http://192.168.43.42:8003/', 'http://192.168.43.42:8005/']
 app = Flask(__name__)
 c = RoundRobin(HOSTS)
 NEXT_NODE = None

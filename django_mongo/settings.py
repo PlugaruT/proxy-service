@@ -84,7 +84,7 @@ DATABASES = {
 
 mongoengine.connect(
     db="djangomongo",
-    host="192.168.1.122"
+    host="192.168.43.42"
 )
 
 # Password validation
